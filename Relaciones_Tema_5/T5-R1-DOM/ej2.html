@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Lista de Clientes</h1>
+    <div id="usuarios"></div>
+
+    <script>
+        const clientes = [
+            { codigo: 1, dni: "4455544X", Nombre: "Juan López López", edad: 18 },
+            { codigo: 2, dni: "7778888X", Nombre: "Luis Mateo López", edad: 25 },
+            { codigo: 3, dni: "6654545M", Nombre: "Pedro Guitierrez López", edad: 41 },
+            { codigo: 4, dni: "9998897X", Nombre: "María Guitierrez López", edad: 32 },
+        ];
+
+        const contenedor = document.getElementById("usuarios");
+
+        clientes.forEach(cliente => {
+            const clienteDiv = document.createElement("div");
+            
+            const codigo = document.createElement("p");
+            codigo.textContent = `Código: ${cliente.codigo}`;
+
+            const dni = document.createElement("p");
+            dni.textContent = `DNI: ${cliente.dni}`;
+
+            const nombre = document.createElement("p");
+            nombre.textContent = `Nombre: ${cliente.Nombre}`;
+
+            const edad = document.createElement("p");
+            edad.textContent = `Edad: ${cliente.edad} años`;
+
+            clienteDiv.appendChild(codigo);
+            clienteDiv.appendChild(dni);
+            clienteDiv.appendChild(nombre);
+            clienteDiv.appendChild(edad);
+
+            contenedor.appendChild(clienteDiv);
+        });
+    </script>
+
+</body>
+</html>

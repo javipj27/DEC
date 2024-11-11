@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+        <script type="module">
+            import { arrArticulos } from "./modulos/articulos.mjs";
+
+            function formateaArticulos() {
+                console.log('Mostrando articulos..')
+                arrArticulos.forEach((articulo) => {
+                    console.log(articulo);
+                });
+            }
+
+            formateaArticulos();
+
+            let section = document.createElement("section");
+            let body = document.querySelector("body");
+            body.appendChild(section);
+
+            arrArticulos.forEach(articulo => {
+                let elementoArticulo = document.createElement("article");
+                let imagen = document.createElement("img");
+            
+                imagen.src = articulo.image;
+                imagen.width = 200; 
+                imagen.height = 200; 
+                elementoArticulo.appendChild(imagen);
+            
+                let contenedorInfo = document.createElement("div");
+                elementoArticulo.appendChild(contenedorInfo);
+            
+                let parrafoCategoria = document.createElement("p");
+                let textoCategoria = document.createTextNode("Categoria: " + articulo.category);
+                parrafoCategoria.appendChild(textoCategoria);
+                contenedorInfo.appendChild(parrafoCategoria);
+            
+                let parrafoTitulo = document.createElement("p");
+                let textoTitulo = document.createTextNode("Nombre: " + articulo.title);
+                parrafoTitulo.appendChild(textoTitulo);
+                contenedorInfo.appendChild(parrafoTitulo);
+            
+                let parrafoDescripcion = document.createElement("p");
+                let textoDescripcion = document.createTextNode("Descripción: " + articulo.description);
+                parrafoDescripcion.appendChild(textoDescripcion);
+                contenedorInfo.appendChild(parrafoDescripcion);
+            
+                let parrafoPuntuacion = document.createElement("p");
+                let textoPuntuacion = document.createTextNode("Puntuación: " + articulo.rating.rate);
+                parrafoPuntuacion.appendChild(textoPuntuacion);
+                contenedorInfo.appendChild(parrafoPuntuacion);
+            
+                let parrafoPrecio = document.createElement("p");
+                let textoPrecio = document.createTextNode("Precio: " + articulo.price+"€");
+                parrafoPrecio.appendChild(textoPrecio);
+                contenedorInfo.appendChild(parrafoPrecio);
+            
+                section.appendChild(elementoArticulo);
+            });
+    
+    
+        </script>
+    </body>
+</html>
