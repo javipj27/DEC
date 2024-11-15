@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+    <img src="img/img1.webp" alt="imagen" id="imagen" height="600px">
+    </p>
+    <p><button onclick="anterior()">Anterior</button></p>
+    <p><button onclick="siguiente()">Siguiente</button></p>
+
+    <script>
+        const imagenes = [
+            'img/img1.webp',
+            'img/img2.jpg',
+            'img/img3.jpeg',
+            'img/img4.webp'
+        ];
+
+        let indice=0;
+        
+        function anterior() {
+            if (indice > 0) {
+                indice--; 
+            } else {
+                indice = imagenes.length - 1;
+            }
+            let imagen = document.getElementById('imagen');
+            imagen.src = imagenes[indice];
+        }
+        function siguiente() {
+            if (indice < imagenes.length -1) {
+                indice ++; 
+            } else {
+                indice = 0;
+            }
+            let imagen = document.getElementById('imagen');
+            imagen.src = imagenes[indice];
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul">
+        <li>Entrada 1</li>
+        <li>Entrada 2</li>
+        <li>Entrada 3</li>
+    </ul>
+    <p><button onclick="nuevaEntrada()">Nueva entrada en la lista</button></p>
+    <script>
+        function nuevaEntrada(){
+            let lista =document.getElementById('ul');
+            let nuevo = document.createElement('li');
+            let texto = document.createTextNode('Nueva Entrada');
+            nuevo.appendChild(texto);
+            let union =lista.appendChild(nuevo);
+        }
+    </script>
+</body>
+</html>

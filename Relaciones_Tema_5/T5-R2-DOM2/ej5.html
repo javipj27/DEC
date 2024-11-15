@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formulario">
+        <div id="inputs">
+            <input type="file" name="adjuntar[]">
+        </div>
+        <p><button type="button" onclick="adjuntarOtro()">Adjuntar otro fichero</button></p>
+        <p><button type="submit">Enviar</button></p>
+    </form>
+
+    <script>
+        function adjuntarOtro() {
+            let nuevoInput = document.createElement('input');
+            nuevoInput.type = 'file';
+            nuevoInput.name = 'adjuntar[]';  
+
+            document.getElementById('inputs').appendChild(nuevoInput);
+        }
+    </script>
+</body>
+</html>

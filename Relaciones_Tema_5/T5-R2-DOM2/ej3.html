@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mitad-articulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero hic aliquam quis numquam...</p>
+    <p id="articulo-entero" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci repudiandae cupiditate aperiam inventore officia hic aliquid, nihil laborum. Ab, ipsam repellat. Dolorum eum aliquam illo iure molestias. Ipsa, temporibus repellendus.</p>
+    <a href="#" onclick="mostrarArticulo()">Mostrar Artículo Completo</a>
+    <p><a href="#" onclick="ocultarArticulo()">Ocultar Artículo Completo</a></p>
+
+    <script>
+        function mostrarArticulo() {
+            document.getElementById('mitad-articulo').style.display = 'none';
+            document.getElementById('articulo-entero').style.display = 'block';
+        }
+        function ocultarArticulo(){
+            document.getElementById('articulo-entero').style.display = 'none';
+            document.getElementById('mitad-articulo').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

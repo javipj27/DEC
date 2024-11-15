@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="pag1">
+        <a href="https://www.google.com" id="google">Google</a>
+        <a href="https://es.pinterest.com/" id="pinterest">Pinterest</a>
+        <a href="https://www.facebook.com/?locale=es_ES" id="facebook">Facebook</a>
+    </p>
+    <p>
+        <a href="https://www.google.com" id="twitter">Twitter</a>
+        <a href="https://es.linkedin.com/" id="linkedin">Linkedin</a>
+        <a href="https://www.instagram.com/" id="instagram">Instagram</a>
+    </p>
+    <p>
+        <a href="https://www.google.com" id="infojobs">Infojobs</a>
+        <a href="https://mcdonalds.es/" id="mcdonalds">Macdonals</a>
+        <a href="https://www.github.com" id="github">Github</a>
+        <a href="https://www.github.com" id="github">Github</a>
+
+    </p>
+    <script>
+        //Numero de enlaces de la pagina
+        let enlaces = document.getElementsByTagName('a');
+        let nEnlaces=enlaces.length;
+        console.log("Numero de enlaces de la pagina: "+nEnlaces);
+
+        //Direccion que enlaza al penultimo enlace
+        let pen = document.getElementsByTagName('a');
+        let penultimo = pen[pen.length-2];
+        let penultimoEnlace = penultimo.href;
+        console.log("Direccion que enlaza al penultimo enlace: "+penultimoEnlace);
+
+        //Numero de enlaces q enlazan a google
+        let nGoogle = document.getElementsByTagName('a'); 
+        let cuenta = 0; 
+
+        for (let i = 0; i < nGoogle.length; i++) {
+            if (nGoogle[i].href.includes('https://www.google.com')) {
+            cuenta++; 
+            }
+        }
+        console.log("Numero de enlaces que enlazan a Google: " + cuenta);
+
+
+
+        //Numero de enlaces del tercer parrafo
+        let enlaces3 = document.getElementsByTagName('p')[2];
+        let nEnlaces3 = enlaces3.getElementsByTagName('a');
+        console.log("Numero de enlaces del tercer parrafo: "+nEnlaces3.length);
+
+
+
+    </script>
+</body>
+</html>
