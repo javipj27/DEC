@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="iniciarTiempo()">
+    <div id="tiempoTranscurrido">Tiempo transcurrido: 0 segundos</div>
+
+    <script type="module">
+        import { mostrarTiempo } from './script.js';
+
+        window.iniciarTiempo = () => {
+            mostrarTiempo();
+        };
+    </script>
+</body>
+</html>

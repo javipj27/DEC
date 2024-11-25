@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 50%;
+            text-align: center;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            cursor: pointer;
+        }
+        h3 {
+            background-color: blanchedalmond;
+           margin: 0 auto;
+        }
+        h3:hover{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="color-celda" data-hex="#FF0000" data-nombre="Rojo">#FF0000</td>
+            <td class="color-celda" data-hex="#00FF00" data-nombre="Verde">#00FF00</td>
+            <td class="color-celda" data-hex="#0000FF" data-nombre="Azul">#0000FF</td>
+        </tr>
+        <tr>
+            <td class="color-celda" data-hex="#FFFF00" data-nombre="Amarillo">#FFFF00</td>
+            <td class="color-celda" data-hex="#FF00FF" data-nombre="Magenta">#FF00FF</td>
+            <td class="color-celda" data-hex="#00FFFF" data-nombre="Cian">#00FFFF</td>
+        </tr>
+        <tr>
+            <td class="color-celda" data-hex="#000000" data-nombre="Negro">#000000</td>
+            <td class="color-celda" data-hex="#FFFFFF" data-nombre="Blanco">#FFFFFF</td>
+            <td class="color-celda" data-hex="#808080" data-nombre="Gris">#808080</td>
+        </tr>
+        <tr>
+            <td class="color-celda" data-hex="#800000" data-nombre="Marrón">#800000</td>
+            <td class="color-celda" data-hex="#808000" data-nombre="Oliva">#808000</td>
+            <td class="color-celda" data-hex="#800080" data-nombre="Púrpura">#800080</td>
+        </tr>
+    </table>
+
+    <script type="module">
+        import { iniciarColores } from './script.js';
+
+        iniciarColores();
+    </script>
+</body>
+</html>

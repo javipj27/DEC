@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            position: relative;
+            height: 100vh;
+        }
+        img {
+            position: absolute;
+            cursor: grab; /* Mano agarrando */
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <img class="arrastrable" src="imagen.png" alt="Imagen 1" style="top: 100px; left: 100px;">
+    <img class="arrastrable" src="imagen2.jpg" alt="Imagen 2" style="top: 200px; left: 300px;">
+    <img class="arrastrable" src="imagen3.png" alt="Imagen 3" style="top: 300px; left: 500px;">
+    <img class="arrastrable" src="imagen4.png" alt="Imagen 4" style="top: 400px; left: 700px;">
+
+    <script type="module">
+        import { arrastre2 } from './script.js';
+        arrastre2();
+    </script>
+
+</body>
+</html>

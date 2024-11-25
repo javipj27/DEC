@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            position: relative;
+            height: 100vh;
+        }
+        img {
+            position: absolute;
+            cursor: grab; /*mano agarrando*/
+            width: 150px; 
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="arrastrar" src="imagen.png" alt="Imagen-Arrastrable" />
+
+    <script type="module">
+        import { arrastre } from './script.js';
+
+        arrastre();
+    </script>
+</body>
+</html>
