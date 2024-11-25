@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <label for="campo1">Campo 1</label>
+        <input id="campo1" class="reemplazo" type="text" placeholder="Escribe algo aquí">
+
+        <label for="campo2">Campo 2</label>
+        <input id="campo2" class="reemplazo" type="text" placeholder="Otro campo aquí">
+    </form>
+
+    <script type="module">
+        import { reemplazarAmpersand } from './script.js';
+
+        reemplazarAmpersand();
+    </script>
+</body>
+</html>
