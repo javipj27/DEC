@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  background-color: teal;
+  color: white;
+  padding: 20px 0;
+}
+
+#header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+#cuadros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+.cuadro {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+#rgb-color {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#resultado {
+  font-size: 24px;
+  color: green;
+  margin-top: 20px;
+}
